@@ -46,7 +46,7 @@ export function CreateModalConta({ closeModal }: ModalProps){
     return(
         <div className="modal-overlay">
             <div className="modal-body">
-                <h2>Cadastre um novo item no cardápio</h2>
+                <h2>Cadastre sua conta bancária</h2>
                 <form className="input-container">
                     <Input label="nomeTitular" value={nomeTitular} updateValue={setNomeTitular}/>
                     <Input label="saldo" value={saldo} updateValue={setSaldo}/>

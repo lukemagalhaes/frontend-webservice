@@ -40,11 +40,11 @@ function App() {
     <div className="container">
       {isLoggedIn ? (
         <>
-          <header>
+          <header className='header'>
             <h2>Bem-vindo!</h2>
-            <button onClick={handleLogout}>Logout</button>
+            <button className='sair' onClick={handleLogout}>Sair</button>
           </header>
-          <h1>Soccer Star</h1>
+          <h1>Loja de Produtos</h1>
           <div className="card-times">
             {dataTime?.map(timeData => (
               <CardTime
@@ -67,13 +67,12 @@ function App() {
             ))}
           </div>
           {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-          <button className='button' onClick={handleOpenModal}>novo</button>
+          <button className='button' onClick={handleOpenModal}>+</button>
         </>
       ) : (
         <>
-          <section>
-            <h1>Por favor, faça login</h1>
-            <header className="section-inputs">
+            <section className="section-inputs">
+            <h1>Fazer Login</h1>
               <input
                 type="text"
                 placeholder="Nome de usuário"
@@ -86,9 +85,8 @@ function App() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
               />
-              <button className='button' onClick={handleLogin}>Login</button>
-            </header>
-          </section>
+              <button className='login' onClick={handleLogin}>Login</button>
+            </section>
         </>
       )}
     </div>
