@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useProdutoDataCreate } from '../../hooks/produto/useProdutoDataCreate';
-import { ProdutoData } from '../../interface/ProdutoData';
 
 import "./modal.css";
-import { useProdutoDataId } from '../../hooks/produto/useProdutoDataId';
+import { useContaBancariaDataCreate } from '../../hooks/contaBancaria/useContaBancariaDataCreate';
+import { ContaBancariaData } from '../../interface/ContaBancariaData';
 
 interface InputProps {
     label: string,
@@ -24,19 +23,19 @@ const Input = ({ label, value, updateValue }: InputProps) => {
     )
 }
 
-export function CreateModal({ closeModal }: ModalProps){
-    const [descricao, setDescricao] = useState("");
-    const [preco, setPreco] = useState(0);
-    const [marca, setMarca] = useState("");
-    const { mutate, isSuccess, isLoading } = useProdutoDataCreate();
+export function CreateModalConta({ closeModal }: ModalProps){
+    const [nomeTitular, setNomeTitular] = useState("");
+    const [saldo, setSaldo] = useState(0);
+    const [numAgencia, setNumAgencia] = useState("");
+    const { mutate, isSuccess, isLoading } = useContaBancariaDataCreate();
     
     const submit = () => {
-        const produtoData: ProdutoData = {
-            descricao, 
-            preco,
-            marca
+        const contaBancariaData: ContaBancariaData = {
+            nomeTitular, 
+            saldo,
+            numAgencia
         }
-        mutate(produtoData)
+        mutate(contaBancariaData)
     }
 
     useEffect(() => {
@@ -49,9 +48,9 @@ export function CreateModal({ closeModal }: ModalProps){
             <div className="modal-body">
                 <h2>Cadastre um novo item no cardápio</h2>
                 <form className="input-container">
-                    <Input label="title" value={descricao} updateValue={setDescricao}/>
-                    <Input label="price" value={preco} updateValue={setPreco}/>
-                    <Input label="image" value={marca} updateValue={setMarca}/>
+                    <Input label="nomeTitular" value={nomeTitular} updateValue={setNomeTitular}/>
+                    <Input label="saldo" value={saldo} updateValue={setSaldo}/>
+                    <Input label="numAgencia" value={numAgencia} updateValue={setNumAgencia}/>
                 </form>
                 <button onClick={submit} className="btn-secondary">
                     {isLoading ? 'postando...' : 'postar'}

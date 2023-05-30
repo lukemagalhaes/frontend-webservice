@@ -67,7 +67,7 @@ function App() {
             ))}
           </div>
           {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-          <button onClick={handleOpenModal}>novo</button>
+          <button className='button' onClick={handleOpenModal}>novo</button>
         </>
       ) : (
         <>
@@ -84,7 +84,7 @@ function App() {
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
-            <button onClick={handleLogin}>Login</button>
+            <button className='button' onClick={handleLogin}>Login</button>
           </header>
           <h1>Por favor, faça login</h1>
         </>
