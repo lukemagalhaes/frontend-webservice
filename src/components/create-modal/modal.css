@@ -27,7 +27,8 @@
 }
 
 .modal-overlay .modal-body h2 {
-    font-size: 32px;
+    font-size: 40px;
+    color: black;
 }
 
 .modal-overlay .modal-body .input-container {
@@ -37,7 +38,7 @@
 .modal-overlay .modal-body input {
     padding: 12px;
     border: 2px solid #c6c5c5c5;
-    color: rgba(0,0,0,0.9);
+    color: white;
     font-size: 18px;
     line-height: 24px;
     border-radius: 12px;
@@ -47,19 +48,40 @@
 }
 
 .modal-overlay .modal-body label {
+
     color: #242424;
-    font-weight: 600;
+    font-weight: 900;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 24px;
 }
 
-.modal-overlay .modal-body .btn-secondary {
-    position: initial;
-    width: 100%;
+.btn-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     margin-top: 32px;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 15px;
+    font-size: 35px;
 }
 
 .modal-overlay .modal-body .btn-secondary:hover {
     background-color: #3a44f8;
     transform: scale(1);
+}
+
+.container .btn-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .modal-overlay .modal-body h2 {
+        font-size: 35px;
+        color: black;
+    }
 }

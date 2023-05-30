@@ -5,6 +5,21 @@ html {
   margin: 0;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 15vh;
+}
+
+header button {
+  border-radius: 8px;
+  width: 15vh;
+  height: 40px;
+  font-size: 20px;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -29,7 +44,7 @@ html {
 .card-times {
   display: flex;
   flex-direction: row;
-  width: 100vh;
+  width: 100vw;
   gap: 32px;
   overflow-x: auto;
 }
@@ -51,7 +66,30 @@ html {
 
 }
 
-/* Adicione regras de mídia para tornar o layout responsivo */
+section {
+  width: 70vh;
+  height: 70vh;
+  background-color: rgba(30, 30, 30, 0.994);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  border-radius: 25px;
+}
+
+.section-inputs {
+  gap: 15px;
+  padding: 70px;
+}
+
+.section-inputs input {
+  width: 30vh;
+  height: 5vh;
+  font-size: 20px;
+  border: 0;
+}
+
 
 @media (max-width: 768px) {
   .container {
@@ -62,6 +100,10 @@ html {
     width: 100vw;
     gap: 16px;
 
+  }
+
+  header {
+    width: 20vh;
   }
 
   .card-times {
@@ -77,6 +119,24 @@ html {
 
   .container button {
     width: 15vw;
+  }
+
+  header button {
+    width: 45vh;
+    height: 40px;
+  }
+
+  section {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  section h1 {
+    font-size: 30px;
+  }
+
+  .section-inputs {
+    padding: 30px;
   }
 }
 
@@ -94,6 +154,23 @@ html {
     right: 8px;
     width: 15vw;
     text-align: center;
+  }
+
+  .container button {
+    width: 15vh;
+  }
+
+  section {
+    width: 40vh;
+    height: 40vh;
+  }
+
+  section h1 {
+    font-size: 28px;
+  }
+
+  .section-inputs {
+    padding: 0px;
   }
 
 }

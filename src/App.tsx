@@ -41,10 +41,10 @@ function App() {
       {isLoggedIn ? (
         <>
           <header>
-            <div>Bem-vindo, {dataUsuario?.login}!</div>
+            <h2>Bem-vindo!</h2>
             <button onClick={handleLogout}>Logout</button>
           </header>
-          <h1>Cardápio</h1>
+          <h1>Soccer Star</h1>
           <div className="card-times">
             {dataTime?.map(timeData => (
               <CardTime
@@ -71,22 +71,24 @@ function App() {
         </>
       ) : (
         <>
-          <header>
-            <input
-              type="text"
-              placeholder="Nome de usuário"
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Senha"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-            />
-            <button className='button' onClick={handleLogin}>Login</button>
-          </header>
-          <h1>Por favor, faça login</h1>
+          <section>
+            <h1>Por favor, faça login</h1>
+            <header className="section-inputs">
+              <input
+                type="text"
+                placeholder="Nome de usuário"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Senha"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+              />
+              <button className='button' onClick={handleLogin}>Login</button>
+            </header>
+          </section>
         </>
       )}
     </div>

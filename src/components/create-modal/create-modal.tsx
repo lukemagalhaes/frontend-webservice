@@ -47,15 +47,16 @@ export function CreateModal({ closeModal }: ModalProps){
     return(
         <div className="modal-overlay">
             <div className="modal-body">
-                <h2>Cadastre um novo item no cardápio</h2>
+                <h2>Cadastre um novo item</h2>
                 <form className="input-container">
-                    <Input label="title" value={descricao} updateValue={setDescricao}/>
-                    <Input label="price" value={preco} updateValue={setPreco}/>
-                    <Input label="image" value={marca} updateValue={setMarca}/>
+                    <Input label="Descrição" value={descricao} updateValue={setDescricao}/>
+                    <Input label="Preço" value={preco} updateValue={setPreco}/>
+                    <Input label="Imagem" value={marca} updateValue={setMarca}/>
+                    <button onClick={submit} className="btn-secondary">
+                    {isLoading ? 'Postando...' : 'Postar'}
+                    </button>
                 </form>
-                <button onClick={submit} className="btn-secondary">
-                    {isLoading ? 'postando...' : 'postar'}
-                </button>
+                
             </div>
         </div>
     )
