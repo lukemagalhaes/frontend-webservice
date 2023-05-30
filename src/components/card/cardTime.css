@@ -20,9 +20,7 @@
     height: 200px;
 }
 
-.cardTime h2,
-h6,
-p {
+.cardTime h2, h6, p {
     margin: 5px 0 10px 0;
     font-size: medium;
 }

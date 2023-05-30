@@ -9,7 +9,6 @@ interface CardProps {
 }
 
 export function CardProduto({ preco, marca, descricao }: CardProps) {
-<<<<<<< HEAD
   const [isModalContaOpen, setIsModalContaOpen] = useState(false);
 
   const handleOpenConta = () => {
@@ -36,14 +35,3 @@ export function CardProduto({ preco, marca, descricao }: CardProps) {
     </div>
   );
 }
-=======
-    return (
-        <div className="card">
-            <img src={"https://source.unsplash.com/random/250x250/?" + marca} />
-            <h2>{descricao}</h2>
-            <h6>{marca}</h6>
-            <p><b>R$:</b>{preco}</p>
-        </div>
-    )
-}
->>>>>>> f7abec859ed08332c9afdf5cb800d11d6e610814
