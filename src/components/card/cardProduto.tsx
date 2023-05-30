@@ -22,8 +22,7 @@ export function CardProduto({ preco, marca, descricao }: CardProps) {
   return (
     <div className="card">
       <img src={`https://source.unsplash.com/random/250x250/?${marca}`} alt={marca} />
-      <h2>{descricao}</h2>
-      <h6>{marca}</h6>
+      <h6>{descricao} - {marca}</h6>
       <p>
         <b>R$:</b>
         {preco}

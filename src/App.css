@@ -84,6 +84,7 @@ header button {
 
 .sair {
   float: right;
+  cursor: pointer;
 }
 
 section {

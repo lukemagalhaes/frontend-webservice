@@ -44,6 +44,10 @@ export function CreateModal({ closeModal }: ModalProps){
         closeModal();
     }, [isSuccess])
 
+    const handleSair = () => {
+        closeModal();
+    }
+
     return(
         <div className="modal-overlay">
             <div className="modal-body">
@@ -51,12 +55,16 @@ export function CreateModal({ closeModal }: ModalProps){
                 <form className="input-container">
                     <Input label="Descrição" value={descricao} updateValue={setDescricao}/>
                     <Input label="Preço" value={preco} updateValue={setPreco}/>
-                    <Input label="Imagem" value={marca} updateValue={setMarca}/>
+                    <Input label="Marca" value={marca} updateValue={setMarca}/>
+                    <div className="button-container">
                     <button onClick={submit} className="btn-secondary">
-                    {isLoading ? 'Postando...' : 'Postar'}
+                        {isLoading ? 'Postando...' : 'Postar'}
                     </button>
+                    <button onClick={handleSair} className="btn-secondary">
+                        Sair
+                    </button>
+                </div>
                 </form>
-                
             </div>
         </div>
     )

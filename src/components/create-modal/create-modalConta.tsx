@@ -43,6 +43,10 @@ export function CreateModalConta({ closeModal }: ModalProps){
         closeModal();
     }, [isSuccess])
 
+    const handleSair = () => {
+        closeModal();
+    }
+
     return(
         <div className="modal-overlay">
             <div className="modal-body">
@@ -52,9 +56,14 @@ export function CreateModalConta({ closeModal }: ModalProps){
                     <Input label="saldo" value={saldo} updateValue={setSaldo}/>
                     <Input label="numAgencia" value={numAgencia} updateValue={setNumAgencia}/>
                 </form>
-                <button onClick={submit} className="btn-secondary">
-                    {isLoading ? 'postando...' : 'postar'}
-                </button>
+                <div className="button-container">
+                    <button onClick={submit} className="btn-secondary">
+                        {isLoading ? 'Postando...' : 'Postar'}
+                    </button>
+                    <button onClick={handleSair} className="btn-secondary">
+                        Sair
+                    </button>
+                </div>
             </div>
         </div>
     )

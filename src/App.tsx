@@ -21,11 +21,7 @@ function App() {
   };
 
   const handleLogin = () => {
-    // Verificar se os campos de usuário e senha estão preenchidos
     if (username.trim() !== '' && password.trim() !== '') {
-      // Realizar a validação dos dados do usuário
-      // A resposta da API será armazenada em dataUsuario
-      // isLoading e isError podem ser usados para exibir indicadores de carregamento ou mensagens de erro
       setUsername('');
       setPassword('');
       setIsLoggedIn(true);
