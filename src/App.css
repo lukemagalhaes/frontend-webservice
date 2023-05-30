@@ -34,7 +34,27 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
     transform: scale(1.1);
   }
+
+  #pesquisa {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: .8rem;
+    margin: 0 auto;
+    padding: .35rem .7rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 40%;
+    display: block;
+    border-bottom: 0.1rem solid transparent;
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
   
+  .form_button{
+    width: 100px;
+    height: 100px;
+  }
   /* Adicione regras de mídia para tornar o layout responsivo */
   
   @media (max-width: 768px) {
