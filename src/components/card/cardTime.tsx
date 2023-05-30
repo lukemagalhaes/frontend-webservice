@@ -10,11 +10,9 @@ interface CardProps {
 export function CardTime({ nome, ano, cidade, estado }: CardProps) {
     return (
         <div className="cardTime">
-           <img src={`https://source.unsplash.com/random/250x250/?${nome}`} alt={nome} />
-            <h2>{nome}</h2>
-            <h2>{ano}</h2>
-            <h2>{cidade}</h2>
-            <p>{estado}</p>
+            <img src={`https://source.unsplash.com/random/250x250/?${nome}`} alt={nome} />
+            <h2>{nome} ({ano})</h2>
+            <p>{cidade} - {estado}</p>
         </div>
     )
 }
