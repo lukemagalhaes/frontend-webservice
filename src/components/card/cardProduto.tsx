@@ -1,4 +1,4 @@
-import "./card.css";
+import "./cardProduto.css";
 
 interface CardProps {
     descricao: string,
@@ -6,7 +6,7 @@ interface CardProps {
     preco: number
 }
 
-export function Card({ preco, marca, descricao } : CardProps){
+export function CardProduto({ preco, marca, descricao } : CardProps){
     return(
         <div className="card">
             <img src={marca}/>

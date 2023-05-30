@@ -18,6 +18,6 @@ export function useProdutoDataSearch(produto: string) {
 
   return {
     ...query,
-    data: query.data?.data,
+    dataProduto: query.data?.data,
   };
 }

@@ -18,6 +18,6 @@ export function useProdutoDataId(id: number) {
 
   return {
     ...query,
-    data: query.data?.data,
+    dataProduto: query.data?.data,
   };
 }

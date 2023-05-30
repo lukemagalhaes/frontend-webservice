@@ -18,6 +18,6 @@ export function useContaBancariaData(){
 
     return {
         ...query,
-        data: query.data?.data
+        dataContaBancaria: query.data?.data
     }
 }

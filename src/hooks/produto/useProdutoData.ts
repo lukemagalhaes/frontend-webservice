@@ -18,6 +18,6 @@ export function useProdutoData(){
 
     return {
         ...query,
-        data: query.data?.data
+        dataProduto: query.data?.data
     }
 }

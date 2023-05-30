@@ -18,6 +18,6 @@ export function useTimeData(){
 
     return {
         ...query,
-        data: query.data?.data
+        dataTime: query.data?.data
     }
 }

@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import { Card } from './components/card/card';
-import { ProdutoData } from './interface/ProdutoData';
+import { CardProduto } from './components/card/cardProduto';
 import { useProdutoData } from './hooks/produto/useProdutoData';
 import { CreateModal } from './components/create-modal/create-modal';
+import { useTimeData } from './hooks/time/useTimeData';
+import { CardTime } from './components/card/cardTime';
 
 function App() {
-  const { data } = useProdutoData();
+  const { dataProduto } = useProdutoData();
+  const { dataTime } = useTimeData();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -17,8 +19,18 @@ function App() {
     <div className="container">
       <h1>Cardápio</h1>
       <div className="card-grid">
-        {data?.map(produtoData => 
-          <Card
+        {dataTime?.map(timeData => 
+          <CardTime
+            nome={timeData.nome} 
+            ano={timeData.ano}
+            cidade={timeData.cidade} 
+            estado={timeData.estado}
+          />
+        )}
+      </div>
+      <div className="card-grid">
+        {dataProduto?.map(produtoData => 
+          <CardProduto
             descricao={produtoData.descricao} 
             marca={produtoData.marca}
             preco={produtoData.preco} 

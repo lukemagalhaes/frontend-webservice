@@ -18,6 +18,6 @@ export function useUsuarioData(){
 
     return {
         ...query,
-        data: query.data?.data
+        dataUsuario: query.data?.data
     }
 }
