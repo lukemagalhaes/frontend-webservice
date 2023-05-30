@@ -9,9 +9,10 @@ interface CardProps {
 export function CardProduto({ preco, marca, descricao } : CardProps){
     return(
         <div className="card">
-            <img src={marca}/>
-            <h2>{descricao}</h2>
-            <p><b>Valor:</b>{preco}</p>
+            <img src={"https://source.unsplash.com/random/250x250/?"+marca}/>
+            <h2>{descricao}</h2> 
+            <h6>{marca}</h6>
+            <p><b>R$:</b>{preco}</p>
         </div>
     )
 }

@@ -9,7 +9,7 @@ interface CardProps {
 
 export function CardTime({ nome, ano, cidade, estado } : CardProps){
     return(
-        <div className="card">
+        <div className="cardTime">
             <img src={nome}/>
             <h2>{nome}</h2>
             <h2>{ano}</h2>

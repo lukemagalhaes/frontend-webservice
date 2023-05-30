@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="container">
       <h1>Cardápio</h1>
-      <div className="card-grid">
+      <div className="card-times">
         {dataTime?.map(timeData => 
           <CardTime
             nome={timeData.nome} 
